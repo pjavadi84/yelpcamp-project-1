@@ -15,7 +15,7 @@ var express =    require("express"),
 // requiring comment,campground, and index files
 var commentRoutes =    require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
-    indexRoutes =       require("./routes/index");
+    indexRoutes =      require("./routes/index");
     
 // Executing variables
 // mongoose.connect("mongodb://localhost/yelp_camp_v13deployed");
