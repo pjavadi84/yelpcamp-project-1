@@ -16,12 +16,15 @@ var express =    require("express"),
 var commentRoutes =    require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes =      require("./routes/index");
-    
-    
+
+// Connecting our local database for testing environment in c9
+// to make heroku database, a database where users will actually
+// see every change and hidden so that nobody access the user/password
+// we save it inside the Heroku setting itself by 
+// going to mongoLAB(Database environment)
 mongoose.connect(process.env.DATABASEURL);
 // Executing variables
 
-// mongoose.connect("mongodb://yelpcamp:password123@ds259070.mlab.com:59070/webdev-yelpcamp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
