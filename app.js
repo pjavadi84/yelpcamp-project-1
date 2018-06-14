@@ -22,7 +22,8 @@ var commentRoutes =    require("./routes/comments"),
 // see every change and hidden so that nobody access the user/password
 // we save it inside the Heroku setting itself by 
 // going to mongoLAB(Database environment)
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL) || "mongodb://localhost/yelp_camp_v10";
+
 // Executing variables
 
 app.use(bodyParser.urlencoded({extended: true}));
